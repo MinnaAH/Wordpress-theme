@@ -1,0 +1,101 @@
+/*
+Theme Name: Bootstrap Theme
+Theme URI:
+Author: Minna Hannula
+Author URI: 
+Description: Theme build for own use with bootstrap
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Bootstrap
+Text Domain: wpTheme
+*/
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    background-color: #F5F5F5;  
+}
+
+/*Header*/
+.jumbotron{
+    background-color:transparent !important;
+}
+.picture{
+    display: block;
+    border-radius: 50%;
+    margin: 10px auto 10px auto;
+    width:50%;
+    height: auto;
+    box-shadow: 9px 11px 61px 1px #5C5C5C;
+}
+.icon{
+    display: flex;
+    margin: auto;
+}
+.icon ul{
+    display: inline-flex; 
+    list-style: none;
+    margin: 10px auto 10px auto;
+    padding: 0;
+}
+.icon li{
+    padding-right: 10px;
+}
+.icon a, .nav a{  
+    font-family: "Playfair Display";
+    text-decoration: none;
+    -webkit-animation-name: itemAnimation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+    animation-name: itemAnimation;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+}
+
+/*Safari*/
+@-webkit-keyframes itemAnimation {
+    from {color: #F5F5F5;}
+    to {color: #000000;}
+}
+/* Standard syntax */
+@keyframes itemAnimation {
+    from {color: #F5F5F5;}
+    to {color: #000000;}
+}
+h2, h5{
+    font-family: "Playfair Display";
+}
+
+/*Page*/
+.container{
+    max-width: 90%;
+}
+.content{
+    font-family: "Montserrat";
+    background-color: #E1E1E1; 
+    border-left: 5px solid #FC7233;
+}
+
+/*Footer*/
+footer{
+    font-family: "Montserrat";
+    background-color: #F5F5F5;
+}
+
+/*Responsive tablet*/
+@media only screen and (min-width: 600px) and (max-width: 960px){
+    .picture{
+        width:30%;
+        box-shadow: 9px 11px 61px 14px #5C5C5C;
+    }
+}
+
+/*Responsive desktop screen*/
+@media only screen and (min-width: 961px){
+    .picture{
+        width:20%;
+        box-shadow: 9px 11px 61px 25px #5C5C5C;
+    }
+}
